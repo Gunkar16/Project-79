@@ -1,58 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Join Paragraphs</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="main.js"></script>
-    </head>
-    <body>
-        <h1>Make paragraphs from input boxes using join function</h1>
-        <span class="inline">
-        
-        <span>1. </span>
-        <input type="text" id="para_input_box_1" placeholder="Input box 1">
-        <br><br>
-        <span>2. </span>
-        <input type="text" id="para_input_box_2" placeholder="Input box 2">
-        <br><br>
-        <span>3. </span>
-        <input type="text" id="para_input_box_3" placeholder="Input box 3">
-        <br><br>
-        <span>4. </span>
-        <input type="text" id="para_input_box_4" placeholder="Input box 4">
-        <br><br>
-        <span>5. </span>
-        <input type="text" id="para_input_box_5" placeholder="Input box 5">
-        <br><br>
-        <span>6. </span>
-        <input type="text" id="para_input_box_6" placeholder="Input box 6">
-        <button onclick="getParagraph1()">Get Paragraph 1</button>
-    </span>
-    
-    <span class="inline">
-    
-        <span>1. </span>
-        <input type="text" id="para_input_box2_1" placeholder="Input box 1">
-        <br><br>
-        <span>2. </span>
-        <input type="text" id="para_input_box2_2" placeholder="Input box 2">
-        <br><br>
-        <span>3. </span>
-        <input type="text" id="para_input_box2_3" placeholder="Input box 3">
-        <br><br>
-        <span>4. </span>
-        <input type="text" id="para_input_box2_4" placeholder="Input box 4">
-        <br><br>
-        <span>5. </span>
-        <input type="text" id="para_input_box2_5" placeholder="Input box 5">
-        <br><br>
-        <span>6. </span>
-        <input type="text" id="para_input_box2_6" placeholder="Input box 6">
-        
-        <button onclick="getParagraph2()">Get Paragraph 2</button>
-    </span>
-    <div id="showParagraph1"></div>
-    <div id="showParagraph2"></div>
+<head>
+    <title>Pizzaria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+<script src="main.js"></script>
+</head>
 
-    </body>
+<body>
+    <div class="topnav">
+        <a class="active" href="#">Pizzaria</a>
+        <div class="topnav-right">
+         <a href="#viewblock">View Menu</a>
+         <a href="#addTopings">Add Menu</a>
+        </div>
+    </div>
+
+    <div class="row" id="viewblock">
+        <div  class="img_div"> 
+            <img class="img-responsive"  src="images/pizza.png">
+        </div>
+      <div id="menu_div">
+          <button id="menu_list" onclick="getmenu()">Show Menu</button>
+          <div id="display_menu">
+              <ol class="menu_list"></ol>
+          </div>
+      </div>
+    </div>
+    
+    <div class="newRow" id="addTopings">
+        <div class="block1">
+            <input id="add_item" placeholder="Type here to add toppings?"/></br>
+            <button id="add_toppings" onclick="add_item()" >Recommend a new Pizza</button>
+        </div>
+        
+    </div>
+     <div class="block2">
+         <div id="display_addedmenu">
+            <section class="cards"></section>
+            <div class="card"></div>        
+         </div>
+     </div>
+
+</body>
 </html>
